@@ -5,3 +5,30 @@
   min-height: 5svh;
   width: 100%;
 }
+
+.ul {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.li {
+  width: var(--space-lg);
+  height: var(--space-lg);
+  position: relative;
+}
+
+/* footer.module.css */
+.linkedIn {
+  color: #0a66c2;
+}
+.gitHub {
+  color: #181717;
+}
+.instagram {
+  color: #e4405f; /* fallback single color */
+}
+.whatsapp {
+  color: #25d366;
+}

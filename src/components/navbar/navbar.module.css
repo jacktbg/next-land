@@ -1,12 +1,20 @@
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   min-height: 10svh;
   width: 100%;
-  gap: 4rem;
   background: var(--color-secondary-2);
   border-bottom: 1px solid var(--color-secondary-1);
   backdrop-filter: blur(12px);
+  padding: 0 var(--space-md);
+}
+
+.logo {
+  align-self: center;
+  font-size: var(--fs-lg); /* fluid typography */
+  font-weight: bold;
+  min-width: 7rem;
 }
 
 .ul {
@@ -14,13 +22,34 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100%;
-  width: 40%;
+  min-width: clamp(30rem, 40%, 60rem);
 }
-.ul > li {
+
+.li {
+  font-size: var(--fs-sm);
+}
+
+.li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-neutral-3);
+  transition: width 0.3s ease-in-out;
+}
+
+.li:hover::after {
+  width: 100%;
+}
+
+.button {
   background: var(--buttground-color);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--color-secondary-1);
-  box-shadow: 0 4px 16px var(--color-secondary-4);
-  backdrop-filter: blur(6px);
+  padding: var(--space-xs) var(--space-xs);
+  border-radius: var(--space-sm);
+  cursor: pointer;
+  color: var(--color-neutral-3);
+}
+
+.button:hover {
+  background: var(--buttground-color-hover);
 }

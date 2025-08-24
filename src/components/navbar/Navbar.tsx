@@ -36,21 +36,24 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar} role="navigation">
+      <Link className={styles.logo} href="/">
+        Jacktbg
+      </Link>
       <ul className={styles.ul}>
         {links.map((link) => (
           <li key={link.id} className={styles.li}>
             <Link href={link.url}>{link.title}</Link>
           </li>
         ))}
+        <li
+          onClick={() => {
+            console.log("logged out")
+          }}
+          className={styles.button}
+        >
+          {login ? "Logout" : "Login"}
+        </li>
       </ul>
-      <button
-        onClick={() => {
-          console.log("logged out")
-        }}
-        className={styles.button}
-      >
-        {login ? "Logout" : "Login"}
-      </button>
     </nav>
   )
 }
