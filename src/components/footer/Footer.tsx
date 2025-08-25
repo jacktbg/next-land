@@ -39,8 +39,11 @@ const icons = [
 ]
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <div>@2024 jacktbg all rights reserved</div>
+    <footer className={styles.footer}>
+      <div>
+        @2024 <span className={styles.span}>jacktbg</span>{" "}
+        all rights reserved
+      </div>
       <ul className={styles.ul}>
         {icons.map((icon) => {
           const IconComponent = icon.component
@@ -58,7 +61,7 @@ const Footer = () => {
           )
         })}
       </ul>
-    </div>
+    </footer>
   )
 }
 

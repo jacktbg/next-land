@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar} role="navigation">
       <Link className={styles.logo} href="/">
-        Jacktbg
+        jacktbg
       </Link>
       <ul className={styles.ul}>
         {links.map((link) => (

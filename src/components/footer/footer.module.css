@@ -4,6 +4,11 @@
   align-items: center;
   min-height: 5svh;
   width: 100%;
+  font-size: var(--fs-sm);
+}
+
+.span {
+  color: var(--color-primary-1);
 }
 
 .ul {
@@ -24,6 +29,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.iconWrapper:hover .linkedIn,
+.iconWrapper:hover .gitHub,
+.iconWrapper:hover .instagram,
+.iconWrapper:hover .whatsapp {
+  transform: scale(1.2);
+  filter: drop-shadow(0 8px 0.7rem var(--color-primary-1));
 }
 
 /* footer.module.css */

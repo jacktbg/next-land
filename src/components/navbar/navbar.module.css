@@ -4,17 +4,22 @@
   align-items: center;
   min-height: 10svh;
   width: 100%;
-  /* background: var(--color-secondary-2); */
-  /* border-bottom: 1px solid var(--color-secondary-1); */
-  /* backdrop-filter: blur(12px); */
-  /* padding: 0 var(--space-md); */
 }
 
 .logo {
   align-self: center;
-  font-size: var(--fs-md); /* fluid typography */
-  font-weight: bold;
-  min-width: 7rem;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  transition: transform 0.3s ease,
+    background 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  background: var(--buttground-color-hover);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ul {
@@ -22,6 +27,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100%;
+  font-weight: 500;
   min-width: clamp(30rem, 40%, 60rem);
 }
 
@@ -45,11 +51,20 @@
 .button {
   background: var(--buttground-color);
   padding: var(--space-xs) var(--space-xs);
-  border-radius: var(--space-sm);
+  border-radius: var(--space-xs);
   cursor: pointer;
   color: var(--color-neutral-3);
+  font-weight: 600;
+  transition: background 0.4s ease-in-out,
+    transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .button:hover {
   background: var(--buttground-color-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--color-primary-1);
+}
+.button:active {
+  transform: translateY(0); /* pressed state */
+  box-shadow: 0 2px 6px var(--color-primary-2);
 }
