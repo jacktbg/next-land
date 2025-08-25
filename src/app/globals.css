@@ -15,15 +15,24 @@ html {
 }
 
 body {
+  overflow-x: hidden;
+  background: var(--background-color);
+  color: var(--color-neutral-1);
+}
+.container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
-  background: var(--background-color);
-  color: var(--color-neutral-1);
-  height: 100svh;
-  width: 100svw;
-  padding: 0 var(--space-lg);
-  overflow-x: hidden;
+  max-width: 1366px;
+  min-height: 100vh;
+  font-family: var(--font-inter);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-montserrat);
 }
 
 a {
@@ -72,6 +81,8 @@ ul {
   --fs-md: clamp(1rem, 0.875rem + 0.5vw, 1.25rem);
   --fs-lg: clamp(1.25rem, 1rem + 1vw, 1.75rem);
   --fs-xl: clamp(1.5rem, 1.25rem + 2vw, 2.5rem);
+  --fs-xxl: clamp(1.75rem, 1.5rem + 3vw, 3.5rem);
+  --fs-xxxl: clamp(2rem, 1.75rem + 4vw, 4.5rem);
 
   /* 📐 Spacing scale */
   --space-xs: 0.5rem;
@@ -79,6 +90,8 @@ ul {
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
+  --space-xxl: 4rem;
+  --space-xxxl: 5rem;
 
   /* 🖥️ Breakpoints (rem-based, for accessibility) */
   --bp-sm: 40rem; /* ~640px */

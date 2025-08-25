@@ -1,22 +1,24 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Montserrat } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar/Navbar"
 import Footer from "@/components/footer/Footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "blog",
-  description: "Simple blog - nextjs",
+  title: "Portfolio",
+  description: "Glassmorphism Portfolio built with Next.js",
 }
 
 export default function RootLayout({
@@ -27,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
+        className={`${inter.variable} ${montserrat.variable}`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <div className={"container"}>
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )

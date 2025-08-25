@@ -12,7 +12,7 @@
 
 .logo {
   align-self: center;
-  font-size: var(--fs-lg); /* fluid typography */
+  font-size: var(--fs-md); /* fluid typography */
   font-weight: bold;
   min-width: 7rem;
 }
