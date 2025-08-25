@@ -24,9 +24,12 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   max-width: 1366px;
-  min-height: 100vh;
+  min-height: 100svh;
   font-family: var(--font-inter);
   margin: 0 auto;
+  background: var(--color-secondary-2);
+  backdrop-filter: blur(12px);
+  padding: 0 var(--space-md);
 }
 
 h1,

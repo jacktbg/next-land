@@ -13,24 +13,28 @@ const icons = [
     component: LinkedinIcon,
     alt: "linkedin",
     className: styles.linkedIn,
+    href: "https://www.linkedin.com/in/jacktbg/",
   },
   {
     id: 2,
     component: GithubIcon,
     alt: "github",
     className: styles.gitHub,
+    href: "https://github.com/jacktbg",
   },
   {
     id: 3,
     component: InstagramIcon,
     alt: "instagram",
     className: styles.instagram,
+    href: "https://www.instagram.com/justjack_jj/",
   },
   {
     id: 4,
     component: WhatsappIcon,
     alt: "whatsapp",
     className: styles.whatsapp,
+    href: "https://wa.me/51946757814",
   },
 ]
 const Footer = () => {
@@ -42,7 +46,14 @@ const Footer = () => {
           const IconComponent = icon.component
           return (
             <li key={icon.id} className={styles.li}>
-              <IconComponent className={icon.className} />
+              <a
+                className={styles.iconWrapper}
+                href={icon.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconComponent className={icon.className} />
+              </a>
             </li>
           )
         })}
