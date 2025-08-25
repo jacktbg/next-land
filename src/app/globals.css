@@ -19,7 +19,7 @@ body {
   background: var(--background-color);
   color: var(--color-neutral-1);
 }
-.container {
+.pageLayout {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;

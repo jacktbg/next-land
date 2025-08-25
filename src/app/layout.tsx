@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${montserrat.variable}`}
       >
-        <div className={"container"}>
+        <div className={"pageLayout"}>
           <Navbar />
           {children}
           <Footer />
