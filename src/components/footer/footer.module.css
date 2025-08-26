@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5svh;
+  width: 100%;
+  font-size: var(--fs-sm);
+}
+
+.span {
+  color: var(--color-primary-1);
+}
+
+.ul {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.li {
+  width: var(--space-lg);
+  height: var(--space-lg);
+  position: relative;
+}
+.iconWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.iconWrapper:hover .linkedIn,
+.iconWrapper:hover .gitHub,
+.iconWrapper:hover .instagram,
+.iconWrapper:hover .whatsapp {
+  transform: scale(1.2);
+  filter: drop-shadow(0 8px 0.7rem var(--color-primary-1));
+}
+
+/* footer.module.css */
+.linkedIn {
+  color: #0a66c2;
+}
+.gitHub {
+  color: #181717;
+}
+.instagram {
+  color: #e4405f; /* fallback single color */
+}
+.whatsapp {
+  color: #25d366;
+}
