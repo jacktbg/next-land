@@ -7,7 +7,7 @@ const About = () => {
     <main className={styles.pageContainer}>
       <div className={styles.imageWrapper}>
         <Image
-          src="/profile.svg"
+          src="/banner.png"
           alt="profile"
           fill={true}
           className={styles.image}
