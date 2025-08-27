@@ -13,7 +13,7 @@ const About = () => {
           className={styles.image}
         />
       </div>
-      <div>
+      <div className={styles.textContainer}>
         <div className={styles.textWrapper}>
           <h1 className={styles.title}>Who Am I?</h1>
           <p className={styles.description}>
@@ -36,16 +36,18 @@ const About = () => {
           </p>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              Documentation
+              - Documentation
             </li>
             <li className={styles.listItem}>
-              Design Architecture
+              - Design Architecture
             </li>
             <li className={styles.listItem}>
-              Develop the Product
+              - Develop the Product
             </li>
           </ul>
-          <button className={styles.button}>Contact</button>
+          <button className={styles.button} type="button">
+            Contact
+          </button>
         </div>
       </div>
     </main>
