@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import React from "react"
+import React, { useState } from "react"
 import styles from "./navbar.module.css"
 
 const links = [
@@ -32,6 +32,9 @@ const links = [
   },
 ]
 const Navbar = () => {
+  const [activeId, setActiveId] = useState<number | null>(
+    null
+  )
   const login = true
 
   return (
@@ -41,7 +44,13 @@ const Navbar = () => {
       </Link>
       <ul className={styles.ul}>
         {links.map((link) => (
-          <li key={link.id} className={styles.li}>
+          <li
+            onClick={() => setActiveId(link.id)}
+            key={link.id}
+            className={`${styles.li} ${
+              activeId === link.id ? styles.active : ""
+            }`}
+          >
             <Link href={link.url}>{link.title}</Link>
           </li>
         ))}
