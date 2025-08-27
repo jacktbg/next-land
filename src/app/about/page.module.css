@@ -1,6 +1,7 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 3rem);
 }
 
 .imageWrapper {
@@ -9,7 +10,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .image {
   object-fit: cover;
   object-position: left bottom;
@@ -17,10 +17,9 @@
 
 .textContainer {
   display: flex;
+  flex: 1;
   justify-content: space-between;
-  align-items: center;
 }
-
 .textWrapper {
   display: flex;
   flex-direction: column;
@@ -44,6 +43,11 @@
   font-size: var(--fs-md);
   font-weight: 300;
 }
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
 
 .button {
   background: var(--buttground-color);
@@ -58,7 +62,6 @@
   transition: background 0.4s ease-in-out,
     transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
 .button:hover {
   background: var(--buttground-color-hover);
   transform: translateY(-2px);
